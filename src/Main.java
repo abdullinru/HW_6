@@ -21,7 +21,8 @@ public class Main {
 
 //        task1(nums);
 //        task2(nums);
-        task3(str);
+//        task3(str);
+        task4(str);
 
     }
     public static void task1(List<Integer> nums) {
@@ -48,6 +49,24 @@ public class Main {
             str1.add(s);
         }
         System.out.println(str1);
+    }
+    public static void task4(List<String> str) {
+        List<Integer> repeat = new ArrayList<>();
+
+        while (str.size() > 0) {
+            int i = 0;
+            int count = 0;
+            String s = str.get(i);
+            while (str.contains(s)) {
+                str.remove(s);
+                count++;
+            }
+            if (count > 1) {
+                repeat.add(count);
+            }
+        }
+
+        System.out.println(repeat);
     }
 }
 
