@@ -1,11 +1,8 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7, 20, 18, 14));
         List<String> str = new ArrayList<>();
         str.add("папа");
         str.add("мама");
@@ -14,15 +11,17 @@ public class Main {
         str.add("папа");
         str.add("мама");
         str.add("баба");
+        str.add("мама");
+        str.add("баба");
         str.add("дедушка");
         str.add("сестра");
         str.add("сын");
         str.add("дочь");
 
 //        task1(nums);
-//        task2(nums);
+        task2(nums);
 //        task3(str);
-        task4(str);
+//        task4(str);
 
     }
     public static void task1(List<Integer> nums) {
@@ -35,7 +34,7 @@ public class Main {
     }
 
     public static void task2(List<Integer> nums) {
-        Set<Integer> numSet = new HashSet<>();
+        Set<Integer> numSet = new TreeSet<>();
         for (Integer num : nums) {
             if (num % 2 == 0) {
                 numSet.add(num);
